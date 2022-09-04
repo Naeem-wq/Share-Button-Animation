@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #242329;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper{
+    position: relative;
+    margin: 10%;
+}
+
+.wrapper :is(.btn, .link){
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: #151515;
+    border-radius: 50%;
+    text-decoration-line: none;
+}
+
+.btn{
+    position: absolute;
+    border: solid 5px lightgray;
+    cursor: pointer;
+    z-index: 10;
+    transition: outline .25s;
+}
+
+.active .btn, .btn:hover{
+    outline: 5px solid lightgreen;
+    outline-offset: -4px;
+}
+
+.item{
+    position: absolute;
+    list-style: none;
+    transition: transform .5s;
+    transition-duration: var(--d);
+}
+
+.wrapper.active #item1{
+    transform: translateX(95px)translateY(-65px);
+}
+
+.wrapper.active #item2{
+    transform: translateX(35px)translateY(-65px);
+}
+
+.wrapper.active #item3{
+    transform: translateX(-85px)translateY(-65px);
+}
+
+.wrapper.active #item4{
+    transform: translateX(-25px)translateY(-65px);
+}
+
+.link:hover {
+    color: #fff;
+    transition: background-color .5s;
+}
+
+.ig:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+}
+
+.li:hover {
+    background-color: #0072b1;
+}
+
+.fc:hover {
+    background-color: #4267B2;
+}
+
+.gt:hover {
+    background-color: #1d1d1d;
+}
